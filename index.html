@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikDownloader Dúo | Pro Master Edition</title>
+    <link rel="icon" type="image/png" href="FOTOLOGO.PNG">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ad-bar-top"></div>
+
+<div class="app-container">
+    <header>
+        <h1 class="neon-logo">⚡ Tik<span>Downloader</span></h1>
+        <p class="neon-subtitle">Descarga doble en HD con Audio Original Pro</p>
+    </header>
+
+    <main>
+        <div class="input-card neon-box">
+            <div class="input-group-wrapper">
+                <div class="input-box">
+                    <div class="arrow-guide">PEGA EL LINK AQUÍ 👇</div>
+                    <input type="text" class="video-input" id="link1" placeholder="Link 1...">
+                    <button class="btn-action" onclick="pegarLink('link1')">📋</button>
+                </div>
+                <div class="input-box">
+                    <div class="arrow-guide">OTRO LINK (OPCIONAL) 👇</div>
+                    <input type="text" class="video-input" id="link2" placeholder="Link 2...">
+                    <button class="btn-action" onclick="pegarLink('link2')">📋</button>
+                </div>
+            </div>
+            <div class="main-buttons">
+                <button onclick="procesarDuo()" id="btnMain" class="btn-neon-main">ANALIZAR VIDEOS</button>
+                <button onclick="limpiarTodo()" class="btn-clear" title="Limpiar todo">🗑️</button>
+            </div>
+        </div>
+
+        <div id="loader" class="spinner"></div>
+        <div id="contenedor-resultados" class="grid-resultados"></div>
+
+        <div id="home-info">
+            <div class="stats-realtime neon-stats">
+                <div class="live-dot"></div>
+                <span class="live-text">EN VIVO:</span>
+                <strong id="contador-descargas">0</strong> 
+                <span class="descargas-texto">videos procesados ahora</span>
+            </div>
+
+            <section class="faq-section">
+                <h3>Seguridad y Confianza</h3>
+                <div class="faq-item">
+                    <h4>¿El video descargado puede tener virus?</h4>
+                    <p>No. El archivo que descargas es un <strong>Video MP4 puro y limpio</strong> directamente de los servidores. Al ser un formato multimedia estándar, no contiene archivos ejecutables ni malware que dañe tu equipo.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Dónde se guardan mis videos?</h4>
+                    <p>Se guardan automáticamente en la carpeta de "Descargas" de tu navegador o dispositivo.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Es una herramienta gratuita?</h4>
+                    <p>Sí, TikDownloader es 100% gratuito y no tiene ninguna limitación de descarga.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="legal-footer">
+        <div class="footer-links">
+            <a href="javascript:void(0)" onclick="abrirModal('modal-terminos')">Términos de servicio</a>
+            <a href="javascript:void(0)" onclick="abrirModal('modal-privacidad')">Política de privacidad</a>
+        </div>
+        <p>© 2026 TikDownloader Master Edition - Protección Garantizada</p>
+    </footer>
+</div>
+
+<div id="modal-terminos" class="modal">
+    <div class="modal-content neon-border-magenta">
+        <span class="close" onclick="cerrarModal('modal-terminos')">&times;</span>
+        <h3>Términos de Servicio</h3>
+        <p>Aceptas descargar contenido solo para uso personal. No nos responsabilizamos por el uso final de los archivos. Respetamos la propiedad intelectual de TikTok.</p>
+    </div>
+</div>
+
+<div id="modal-privacidad" class="modal">
+    <div class="modal-content neon-border-cyan">
+        <span class="close" onclick="cerrarModal('modal-privacidad')">&times;</span>
+        <h3>Política de Privacidad</h3>
+        <p>No almacenamos datos personales ni rastreamos tus descargas. Todo el proceso es anónimo y seguro dentro de tu propio navegador.</p>
+    </div>
+</div>
+
+<div class="ad-bar-bottom"></div>
+<script src="script.js"></script>
+</body>
+</html>
