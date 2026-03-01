@@ -34,6 +34,7 @@ async function pegarLink(id) {
 }
 
 async function procesarDuo() {
+    window.open('https://glamourpicklessteward.com/ngdgrja8?key=0ef43db58ea3f0726cff5f9261b7be5c', '_blank');
     const inputs = document.querySelectorAll('.video-input');
     const btn = document.getElementById('btnMain');
     const loader = document.getElementById('loader');
@@ -109,5 +110,6 @@ function limpiarTodo() {
     document.getElementById('contenedor-resultados').innerHTML = "";
     document.querySelectorAll('.arrow-guide').forEach(g => g.style.display = "block");
 }
+
 
 window.onload = iniciarContadorLive;
